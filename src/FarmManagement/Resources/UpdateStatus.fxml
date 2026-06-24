@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.UpdateStatusController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Update Cow Status" />
+    <Separator />
+
+    <GridPane hgap="15.0" vgap="15.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="Select Cow ID:" GridPane.rowIndex="0" />
+        <ComboBox fx:id="comboCows" prefWidth="350.0" promptText="Choose active cow..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="New Status:" GridPane.rowIndex="1" />
+        <HBox spacing="20.0" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <RadioButton fx:id="rbSold" text="SOLD" selected="true">
+                <toggleGroup><ToggleGroup fx:id="statusGroup"/></toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDeceased" text="DECEASED" toggleGroup="$statusGroup" />
+        </HBox>
+
+        <Label text="Date of Event:" GridPane.rowIndex="2" />
+        <DatePicker fx:id="dateEvent" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label fx:id="lblBuyer" text="Buyer Name:" GridPane.rowIndex="3" />
+        <TextField fx:id="txtBuyer" promptText="Enter buyer name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label fx:id="lblPrice" text="Sale Price (PKR):" GridPane.rowIndex="4" />
+        <TextField fx:id="txtSalePrice" promptText="Enter amount" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <Separator />
+    <Button onAction="#handleUpdate" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="UPDATE &amp; CLOSE RECORD" />
+</VBox>

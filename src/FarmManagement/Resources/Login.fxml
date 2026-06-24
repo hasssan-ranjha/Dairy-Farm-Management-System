@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.LoginController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+
+    <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+        <Text text="DAIRY FARM SYSTEM" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+        <Text text="Login to manage your livestock" style="-fx-fill: #7f8c8d;" />
+
+        <Separator prefWidth="200.0"/>
+
+        <TextField fx:id="txtName" promptText="Enter Your Name" style="-fx-pref-height: 40;" />
+
+        <ComboBox fx:id="comboRole" prefWidth="300.0" promptText="Select Role (Admin/Worker)" style="-fx-pref-height: 40;" />
+
+        <PasswordField fx:id="txtPassword" promptText="Password" style="-fx-pref-height: 40;" />
+
+        <Button fx:id="btnLogin" onAction="#handleLogin" prefWidth="300.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 40;" text="LOGIN" />
+    </VBox>
+</VBox>

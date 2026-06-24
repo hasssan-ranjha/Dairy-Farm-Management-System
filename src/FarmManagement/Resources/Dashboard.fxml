@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.DashboardController">
+    <left>
+        <VBox spacing="15.0" style="-fx-background-color: #2c3e50; -fx-padding: 20;" prefWidth="220.0">
+            <children>
+                <Label text="DAIRY FARM" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;" />
+                <Separator opacity="0.3" />
+
+                <Button fx:id="btnViewActive" text="View Active Cows" onAction="#showViewActive" prefWidth="200.0"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Button fx:id="btnAddCow" text="Add New Cow" onAction="#showAddCow" prefWidth="200.0"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Button fx:id="btnAddMilk" text="Add Milk Record" onAction="#showAddMilk" prefWidth="200.0"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Button fx:id="btnUpdateStatus" text="Update Cow Status" onAction="#showUpdateStatus" prefWidth="200.0"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Button fx:id="btnViewClosed" text="Financial Reports" onAction="#showViewClosed" prefWidth="200.0"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Region VBox.vgrow="ALWAYS" />
+
+                <Button text="LOGOUT" onAction="#handleLogout" prefWidth="200.0"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #ecf0f1;">
+            <Label text="Welcome! Select an option from the sidebar." style="-fx-font-size: 18; -fx-text-fill: #95a5a6;" />
+        </StackPane>
+    </center>
+</BorderPane>

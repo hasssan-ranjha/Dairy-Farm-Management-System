@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20.0" style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.FinancialReportsController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 26; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Financial Performance Report" />
+
+    <HBox spacing="20.0">
+        <VBox prefWidth="200" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #3498db; -fx-border-width: 0 0 0 5;">
+            <Label text="Total Investment" style="-fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="lblTotalInvestment" style="-fx-font-size: 18; -fx-font-weight: bold;" text="PKR 0"/>
+        </VBox>
+        <VBox prefWidth="200" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #2ecc71; -fx-border-width: 0 0 0 5;">
+            <Label text="Total Revenue" style="-fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="lblTotalRevenue" style="-fx-font-size: 18; -fx-font-weight: bold;" text="PKR 0"/>
+        </VBox>
+        <VBox prefWidth="200" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #e67e22; -fx-border-width: 0 0 0 5;">
+            <Label text="Net Profit/Loss" style="-fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="lblNetProfit" style="-fx-font-size: 18; -fx-font-weight: bold;" text="PKR 0"/>
+        </VBox>
+    </HBox>
+
+    <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Closed Asset Details (Sold/Deceased)" />
+
+    <TableView fx:id="tableFinancials" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="Cow ID" prefWidth="70"/>
+            <TableColumn fx:id="colStatus" text="Final Status" prefWidth="90"/>
+
+            <TableColumn fx:id="colBuyDate" text="Purchase Date" prefWidth="110"/>
+            <TableColumn fx:id="colBuyPrice" text="Buy Price" prefWidth="110"/>
+
+            <TableColumn fx:id="colSaleDate" text="Sale/Close Date" prefWidth="110"/>
+            <TableColumn fx:id="colSalePrice" text="Sale Price" prefWidth="110"/>
+
+            <TableColumn fx:id="colProfit" text="P/L Amount" prefWidth="110"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.ViewActiveController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Current Livestock Inventory" style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <TableView fx:id="tableCows" VBox.vgrow="ALWAYS">
+        <columns>
+
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colBreed" text="Breed" prefWidth="100"/>
+            <TableColumn fx:id="colSource" text="Source" prefWidth="90"/>
+
+            <TableColumn fx:id="colPrice" text="Buy Price (PKR)" prefWidth="110"/>
+
+            <TableColumn fx:id="colEntry" text="Entry Date" prefWidth="100"/>
+            <TableColumn fx:id="colRepro" text="Status" prefWidth="110"/>
+            <TableColumn fx:id="colInsem" text="Insem. Date" prefWidth="100"/>
+            <TableColumn fx:id="colCalving" text="Exp. Calving" prefWidth="100"/>
+            <TableColumn fx:id="colMilk" text="Total Milk (L)" prefWidth="100"/>
+
+
+        </columns>
+    </TableView>
+</VBox>

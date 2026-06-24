@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FarmManagement.AddMilkController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Daily Milk Recording" />
+    <Separator />
+
+    <GridPane hgap="15.0" vgap="15.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="Select Cow (ID):" GridPane.rowIndex="0" />
+        <ComboBox fx:id="comboCows" prefWidth="300.0" promptText="Choose a cow..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Milk Amount (Liters):" GridPane.rowIndex="1" />
+        <TextField fx:id="txtAmount" promptText="e.g. 12.5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Date:" GridPane.rowIndex="2" />
+        <DatePicker fx:id="datePicker" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <HBox spacing="10.0">
+        <Button onAction="#handleSaveMilk" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="SAVE RECORD" />
+    </HBox>
+</VBox>
